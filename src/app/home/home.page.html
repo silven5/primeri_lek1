@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Лекція 1</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <h2>Приклад </h2>
+            <p>
+                Напишіть програму, яка виводить на екран числа від 1 до N. При цьому замість чисел, кратних трьом, програма повинна виводити слово Fizz, а замість чисел, кратних п'яти - слово Buzz. Якщо число кратно п'ятнадцяти, то програма повинна виводити слово FizzBuzz
+            </p>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="floating">Введіть N</ion-label>
+                <ion-input type="number" value="15" #n></ion-input>
+            </ion-item>
+            <ion-button color="success" (click)="ras(n.value)">Розрахунок</ion-button>
+            <ion-grid>
+                <ion-row>
+                    <ion-col *ngFor="let rez of rezult">{{rez}}</ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
